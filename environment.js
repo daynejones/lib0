@@ -122,7 +122,7 @@ const forceColor = isNode &&
 
 /* c8 ignore start */
 export const supportsColor = !hasParam('no-colors') &&
-  (!isNode || process.stdout.isTTY || forceColor) && (
+  (!isNode || process?.stdout?.isTTY || forceColor) && (
   !isNode || hasParam('color') || forceColor ||
     getVariable('COLORTERM') !== null ||
     (getVariable('TERM') || '').includes('color')
